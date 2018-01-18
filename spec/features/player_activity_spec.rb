@@ -1,4 +1,3 @@
-
 feature 'see player2 hit points'do
   scenario 'player1 to be able to view player2 hit points'do
     sign_in_and_play
@@ -7,7 +6,7 @@ feature 'see player2 hit points'do
 end
 
 feature 'player1 attacks player2' do
-  scenario 'player1 have a confirmation after the attack' do
+  scenario 'player1 has a confirmation after the attack' do
     sign_in_and_play
     click_button 'Attack'
     expect(page).to have_text('Alice attacks Bob')

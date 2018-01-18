@@ -4,7 +4,6 @@ describe Game do
   subject(:game) { described_class.new(player1, player2) }
   let(:player1) { double :player }
   let(:player2) { double :player }
-  let(:hitpoints) { double :hitpoints }
 
   describe "#player1" do
     it "retrives player1" do

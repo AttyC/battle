@@ -11,7 +11,6 @@ describe Player do
     end
   end
 
-
   describe "#damage" do
     it "shows new hit points value" do
       expect{ player2.damage }.to change{ player2.hitpoints }.by(-10)
