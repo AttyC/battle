@@ -13,3 +13,11 @@ feature 'see player2 hit points'do
     within('.hitpoints') { expect(page).to have_text(23) }
   end
 end
+
+feature 'player1 attacks player2' do
+  scenario 'player1 have a confirmation after the attack' do
+    sign_in_and_play
+    click_button 'Attack'
+    expect(page).to have_text('Alice attacks Bob')
+  end
+end
