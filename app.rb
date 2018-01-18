@@ -13,7 +13,7 @@ class Battle < Sinatra::Base
     $player1 = Player.new(params[:player1_name])
     $player2 = Player.new(params[:player2_name])
     $hitpoints = Player.new(params[:hitpoints])
-    $game = Game.new
+    $game = Game.new($player1, $player2)
     redirect to('/play')
   end
 

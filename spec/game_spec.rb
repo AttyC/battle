@@ -1,11 +1,16 @@
 require 'game'
 
 describe Game do
-  subject(:game) { described_class.new }
-  # let(:player_class) { double :player_class, new: player }
+  subject(:game) { described_class.new(player1, player2) }
   let(:player1) { double :player }
   let(:player2) { double :player }
   let(:hitpoints) { double :hitpoints }
+
+  # describe "#initialize" do
+  #   it "shows instance variable" do
+  #     (game.player1)
+  #   end
+  # end
 
   describe "#attack" do
     it "attacks player" do
@@ -14,11 +19,5 @@ describe Game do
     end
   end
 
-  # describe "#damage" do
-  #   it "shows new hit points value" do
-  #     player2.hitpoints = 100
-  #     expect{ game.damage }.to change{ player2.hitpoints }.by(-10)
-  #
-  #   end
-  # end
+
 end
