@@ -6,11 +6,17 @@ describe Game do
   let(:player2) { double :player }
   let(:hitpoints) { double :hitpoints }
 
-  # describe "#initialize" do
-  #   it "shows instance variable" do
-  #     (game.player1)
-  #   end
-  # end
+  describe "#player1" do
+    it "retrives player1" do
+      expect(game.player1).to eq player1
+    end
+  end
+
+  describe "#player2" do
+    it "retrives player2" do
+      expect(game.player2).to eq player2
+    end
+  end
 
   describe "#attack" do
     it "attacks player" do
