@@ -2,7 +2,7 @@ require 'player'
 
 describe Player do
   # let (:name) { double :name }
-  subject(:player1) { described_class.new('Alice') }
+  subject(:player1) { described_class.new('Alice', 100) }
 
   describe 'initialize' do
     it 'returns player1 name' do
