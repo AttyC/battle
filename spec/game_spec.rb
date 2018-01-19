@@ -22,6 +22,7 @@ describe Game do
       expect(player2).to receive(:damage)
       game.attack(player2)
     end
+
   end
 
   describe '#active_player' do

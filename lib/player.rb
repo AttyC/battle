@@ -10,6 +10,15 @@ class Player
 
   def damage
     @hitpoints -= 10
+    p @hitpoints
+    lost?
+    p lost?
+  end
+
+  private
+  def lost?
+    return true if @hitpoints == 0
+    false
   end
 
 end

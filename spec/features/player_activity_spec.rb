@@ -30,4 +30,14 @@ feature 'reduce player2 hit points' do
     click_button 'Attack'
     expect(page).to have_text('Alice has 100 points')
   end
+
+  scenario 'reduce HP to zero' do
+    sign_in_and_play
+    18.times do
+      click_button 'Attack'
+      click_link 'Next turn'
+    end
+    click_button 'Attack'
+    expect(page).to have_text('Bob has lost, sucker!')
+  end
 end
