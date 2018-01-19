@@ -1,8 +1,11 @@
-<%= @game.player1.name %> <%= @game.player2.name %>
+<h2>Players: <%= @game.player1.name %> and <%= @game.player2.name %></h2>
+
 
 <div class="hitpoints">
-  <%= @game.player2.name %> has <%= @game.player2.hitpoints %> points
-  <br>
+  <h4><%= @game.player2.name %> has <%= @game.player2.hitpoints %> points</h4>
+
+  <h5 class="turn"><%= @game.current_turn.name %>'s turn</h5>
+
   <form action="/attack" method="get">
     <input type="submit" value="Attack">
   </form>
