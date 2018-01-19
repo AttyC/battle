@@ -24,18 +24,12 @@ class Battle < Sinatra::Base
 
   get '/attack' do
     @game = $game
-    $game.attack(@game.player2)
-    $game.switch_turns
+    $game.attack(@game.opponent)
     erb :attack
   end
+
+  get '/switch' do
+    $game.switch_turns
+    redirect to('/play')
+  end
 end
-
-
-
-# get '/' do
-#   "value = " << session[:value].inspect
-# end
-#
-# get '/:value' do
-#   session['value'] = params['value']
-# end

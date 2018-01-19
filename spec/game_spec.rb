@@ -24,16 +24,16 @@ describe Game do
     end
   end
 
-  describe '#current_turn' do
+  describe '#active_player' do
     it 'starts as player1' do
-      expect(game.current_turn).to eq player1
+      expect(game.active_player).to eq player1
     end
   end
 
   describe '#switch_turns' do
     it 'switches player' do
       game.switch_turns
-      expect(game.current_turn).to eq player2
+      expect(game.active_player).to eq player2
     end
   end
 
