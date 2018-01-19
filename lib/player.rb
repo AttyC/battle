@@ -10,9 +10,7 @@ class Player
 
   def damage
     @hitpoints -= 10
-    p @hitpoints
     lost?
-    p lost?
   end
 
   private

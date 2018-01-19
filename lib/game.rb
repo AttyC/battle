@@ -1,5 +1,14 @@
 class Game
 
+#new class method to create new class variable
+  def self.create(player1, player2)
+    @this_game = Game.new(player1, player2)
+  end
+
+  def self.instance
+    @this_game
+  end
+  
   attr_reader :current_turn, :active_player, :opponent
 
   def initialize(player1, player2)
