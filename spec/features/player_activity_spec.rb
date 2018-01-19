@@ -22,6 +22,12 @@ feature 'reduce player2 hit points' do
   scenario 'player2 hit points reduced by 10 when attacked' do
     sign_in_and_play
     click_button 'Attack'
-    expect(page).to have_text(90)
+    expect(page).to have_text('Bob has 90 points')
+  end
+
+  scenario 'player1 hit points are shown' do
+    sign_in_and_play
+    click_button 'Attack'
+    expect(page).to have_text('Alice has 100 points')
   end
 end
