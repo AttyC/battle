@@ -3,7 +3,7 @@
 
 <div class="hitpoints">
   <h4><%= @game.player2.name %> has <%= @game.player2.hitpoints %> points</h4>
-
+  <h4><%= @game.player1.name %> has <%= @game.player1.hitpoints %> points</h4>
   <h5 class="turn"><%= @game.current_turn.name %>'s turn</h5>
 
   <form action="/attack" method="get">
